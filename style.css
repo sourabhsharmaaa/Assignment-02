@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+}
+
+.label {
+  color: white;
+  font-size: 1rem;
+  margin: 7px;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+.nav_item {
+  padding: 0.5rem;
+  display: block;
+}
+.nav_item > a {
+  text-decoration: none;
+  color: #d2d0db;
+}
+.nav_item > a:hover {
+  color: white;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 18px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+@media (max-width: 400px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .list {
+    /* display: none; */
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0.2rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav_item {
+    width: 100%;
+    text-align: center;
+    padding: 0.4rem 0;
+  }
+  .nav_item.active {
+    display: flex;
+  }
+}
+
+/* Image */
+.img {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Card */
+.cards {
+  display: flex;
+  width: 88%;
+  padding: 0.7rem;
+  margin-left: 1.5rem;
+}
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 1rem 2rem;
+}
+
+.card--primary .card__header {
+  background: #2584ff;
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background: #00d9ff;
+  color: #ffffff;
+}
+
+@media (max-width: 400px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.19rem;
+  }
+  .card__header,
+  .card__body {
+    text-align: center;
+    padding: 2rem 3rem;
+    margin-bottom: 0.3rem;
+  }
+  .card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: hidden;
+  }
+}
+/*Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background: #2584ff;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+}
